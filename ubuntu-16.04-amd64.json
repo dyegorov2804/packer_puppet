@@ -27,24 +27,6 @@
             "scripts": "scripts/common/install-puppet.sh"
         },
         {
-            "type": "file",
-            "source": "puppet/modules",
-            "destination": "/tmp/puppet-modules"
-        },
-        {
-            "type": "file",
-            "source": "puppet/manifests",
-            "destination": "/tmp/puppet-manifests"
-        },
-        {
-            "type": "shell",
-            "inline": [
-                "sudo cp -r /tmp/puppet-modules /etc/puppet/modules",
-                "sudo cp -r /tmp/puppet-manifests /etc/puppet/manifests",
-                "rm -rf /tmp/{puppet-modules,puppet-manifests}"
-            ]
-        },
-        {
             "type": "puppet-masterless",
             "manifest_file": "puppet/manifests/site.pp",
             "execute_command": "sudo -E puppet apply --detailed-exitcodes --debug {{.ManifestFile}}"

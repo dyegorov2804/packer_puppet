@@ -8,7 +8,7 @@ function usage() {
     EXIT_CODE=${1:-0}
 
     echo
-    echo "Usage $0 [-t TYPE] [-p BRANCH] [-d]"
+    echo "Usage $0 [-t TYPE] [-b BRANCH] [-d]"
     echo
     echo '    -t TYPE   -- Different types of build to be added. Right now aws ebs'
     echo '    -d        -- Debug mode where packer asks what to do in case of error rather than cleaning up and quitting'

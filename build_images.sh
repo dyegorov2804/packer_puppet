@@ -43,5 +43,4 @@ then
   exit 1
 fi
 
-#packer build -var 'aws_access_key=AKIAJPFV6X4D3OUJG6WA' -var 'aws_secret_key=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' ubuntu-16.04-amd64.json
 packer build -var "aws_access_key=$AWS_ACCESS_KEY" -var "aws_secret_key=$AWS_SECRET_KEY" ubuntu-16.04-amd64.json

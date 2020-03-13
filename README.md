@@ -1,10 +1,15 @@
 # packer_puppet
-Using Packer and masteerless puppet to build amazon-ebs amis.
+Using Packer and masterless puppet to build amazon-ebs amis.
 
+# Installing
 Make sure you have Packer v1.5.1 installed.
 
-export AWS_ACCESS_KEY="The key you have"
+## One time
+    export AWS_ACCESS_KEY=VALID-ACCESS-KEY
+    export AWS_SECRET_ACCESS_KEY=VALID-SECRET-ACCESS-KEY
 
-export AWS_SECRET_KEY="The secret key you have"
+# Running
 
-./build_images.sh
+    ./build_images.sh -h for help
+    ./build_images to run with default params
+    
